@@ -202,15 +202,23 @@
     <integer name="config_soundEffectVolumeDb">-12</integer>
 
     <!-- Timeout in MS for how long you have to long-press the back key to
-         kill the foreground app. -->
-    <integer name="config_backKillTimeout">1500</integer>
+         kill the foreground app. >
+    <integer name="config_backKillTimeout">1500</integer -->
 
-    <!--Boolean to enable stk functionality on Samsung phones-->
+    <!-- empty string to disable, or eg: /sys/kernel/fast_charge/force_fast_charge
+         for a custom path the delivered kernel supports.
+         it is disabled by default so devices need to add an overlay to enable >
+    <string name="config_fastChargePath" translatable="false">/sys/kernel/fast_charge/force_fast_charge</string -->
+
+    <!-- Disable the home key unlock setting >
+    <bool name="config_disableHomeUnlockSetting">false</bool -->
+
+    <!-- Workaround for devices with broken keyboards >
+    <bool name="config_forceDisableHardwareKeyboard">true</bool -->
+
+    <!-- Boolean to enable stk functionality on Samsung phones -->
     <bool name="config_samsung_stk">true</bool>
 
-    <!-- Disable lockscreen translucent decor by default -->
-    <bool name="config_enableLockScreenTranslucentDecor">true</bool>
-
-    <!-- SD card is hot-pluggable on this device -->
-    <bool name="config_batterySdCardAccessibility">true</bool>
+    <!-- Boolean to force HW Rotation Lock >
+    <bool name="config_hasRotationLockSwitch">false</bool-->
 </resources>
